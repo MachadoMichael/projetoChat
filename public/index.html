@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperChat</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div class="box">
+            <h2 id="create_room_h2">CREATE YOUR CHAT ROOM</h2>
+            <form class="form" name="user_form_name" id="user_form" action="">
+                <input class="input_text" name="room_server" id="room_server" type="text" placeholder=" CHAT ROOM NAME" required>
+                <button class="btnSubmit" type="submit"></button>
+            </form>
+        </div>
+
+        <h2>OR</h2>
+
+        <div class="box">
+            <h2 id="connection_room_h2">CONNECT ON CHAT ROOM</h2>
+            <form class="form" name="connect_server_name" id="connect_server_form" action="">
+                <input class="input_text" name="room_server_connect" id="room_server_connect" type="text" placeholder=" CHAT ROOM NAME" required>
+                <button class="btnSubmit" type="submit"></button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>deVAxe</footer>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

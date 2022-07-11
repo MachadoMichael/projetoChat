@@ -1,0 +1,93 @@
+
+body {
+    background-color: darkslategrey;
+    justify-content: center;
+    display: flex;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 30vh;
+}
+
+.box {
+    display: inline;
+    background-color: rgb(58, 61, 59);
+    width: 20vw;
+    height: 13vh;
+    color: antiquewhite;
+    border: 2px wheat solid;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    box-sizing: border-box;
+}
+
+.btnSubmit {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../assets/icons/enter2.png);
+    box-sizing: border-box;
+}
+
+.input_text {
+    margin-right: 10px;
+    border: 2px black solid;
+    
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+input{
+    background-color: antiquewhite;
+}
+
+@media screen and (max-width:1000px) {
+    #container{
+        display: initial;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .box{
+        display: inline-block;
+        width: 60vw;
+        height: 30vh;
+        margin: 0;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #container{
+        display: initial;
+        flex-direction: row;
+        margin-top: 15vh;
+    }
+
+    .box{
+        display: inline-block;
+        width: 80vw;
+        height: 20vh;
+    }
+}

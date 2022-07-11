@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERCHAT</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="user_box"  class="box">
+            <h2 id="user_text">ENTER WITH YOUR NAME</h2>
+            <form class="form" name="user_form_name" id="user_form" action="">
+                <input class="input_text" name="user" id="user" type="text" placeholder="YOUR NICKNAME" required>
+                <button class="btnSubmit" type="submit"></button>
+            </form>
+        </div>
+       
+        <div id="chatBox">
+            <h2 id="server_text">Welcome to the server </h2>
+            <div id="messages"></div>
+            <form class="form" name="message_form_name" id="message_form" action="">
+                <input class="input_text" name="msg" id="message" type="text">
+                <button id="btn_msg" class="btnSubmit" type="submit"></button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>deVAxe</footer>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script/chat.js"></script>
+</body>
+
+</html>
