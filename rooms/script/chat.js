@@ -1,4 +1,4 @@
-const port = process.env.PORT || 3000
+
 const room = window.location.pathname.replace(/\//g, '')
 const socket = io(`http://localhost:${port}/${room}`)
 

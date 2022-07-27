@@ -6,6 +6,9 @@ const path = require('path')
 const socketIO = require('socket.io')
 
 app.use('/', express.static(path.join(__dirname, 'public')))
+app.get('/', (req, res)=>{
+    res.send(port)
+})
 
 const server = app.listen(port, () => {
     console.log('Running on PORT ' + port)

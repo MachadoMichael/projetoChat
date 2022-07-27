@@ -1,9 +1,8 @@
 const room = window.location.pathname.replace(/\//g, '')
-const port = process.env.PORT || 3000
 const socket = io(`http://localhost:${port}/${room}`)
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    fetch('/').then(res => res.json()).then(data => console.log(data))
     const userForm = document.querySelector('#user_form')
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
