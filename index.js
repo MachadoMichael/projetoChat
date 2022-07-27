@@ -1,14 +1,14 @@
 const express = require('express')
 const { url } = require('inspector')
 const app = express()
-const PORT = 3000
+const port = process.env.PORT || 3000
 const path = require('path')
 const socketIO = require('socket.io')
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 
-const server = app.listen(PORT, () => {
-    console.log('Running on PORT ' + PORT)
+const server = app.listen(port, () => {
+    console.log('Running on PORT ' + port)
 })
 
 const messages = {}
