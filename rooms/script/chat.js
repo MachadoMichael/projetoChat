@@ -1,6 +1,7 @@
 
 const room = window.location.pathname.replace(/\//g, '')
-const socket = io(`http://localhost:${port}/${room}`)
+var url = 'http://localhost:3000/'
+const socket = io(`${url}${room}`)
 
 
 socket.on('update_messages', (messages) => {

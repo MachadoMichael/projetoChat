@@ -1,8 +1,8 @@
 const room = window.location.pathname.replace(/\//g, '')
-const socket = io(`http://localhost:${port}/${room}`)
+var url = 'http://localhost:3000/'
+const socket = io(`${url}${room}`)
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/').then(res => res.json()).then(data => console.log(data))
     const userForm = document.querySelector('#user_form')
     userForm.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         socket.on('try_create_server', (info) => {
 
             if (info == 'new server created') {
-                window.location.href = `http://localhost:${port}/${room_server}`;
+                window.location.href = `${url}${room_server}`;
             } else {
                 let create_room_h2 = document.getElementById('create_room_h2')
                 create_room_h2.innerText = 'Server already exists '
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         socket.on('try_connect_server', (info) => {
 
             if (info == 'y') {
-                window.location.href = `http://localhost:${port}/${room_server_connect}`;
+                window.location.href = `${url}${room_server_connect}`;
             } else {
                 let connection_room_h2 = document.getElementById('connection_room_h2')
                 connection_room_h2.innerText = 'Do you need create this server'
