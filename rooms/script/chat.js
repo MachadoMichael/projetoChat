@@ -1,6 +1,6 @@
 
 const room = window.location.pathname.replace(/\//g, '')
-var url = 'http://localhost:3000/'
+var url = 'https://chatmultrooms.herokuapp.com/'
 const socket = io(`${url}${room}`)
 
 
